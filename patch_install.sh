@@ -10,7 +10,7 @@ cp LightBurn.sh $app_dir/
 chmod +x $app_dir/LightBurn.sh 
 
 # and then replace the original desktop file to use the launcher with the patch
-sed 's#LightBurn/LightBurn$#LightBurn/LightBurn.sh#' $desktop_file > $desktop_file.new
+sed 's#LightBurn/LightBurn$#LightBurn/LightBurn.sh %f#' $desktop_file > $desktop_file.new
 
 # finnaly replace that file
 mv $desktop_file.new $desktop_file
